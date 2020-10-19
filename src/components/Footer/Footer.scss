@@ -1,0 +1,63 @@
+@import "../../stylesheets/color-palette";
+
+$padding: 60px;
+$paddingRow: calc(#{$padding} / 3);
+$paddingFooter: calc(#{$padding} - #{$paddingRow});
+
+.footer {
+  padding: $paddingFooter 0;
+  background: $clr-footer-bg;
+  color: white;
+
+  &-copyright {
+    white-space: pre;
+    color: inherit;
+  }
+
+  &-row {
+    display: flex;
+    align-items: center;
+    padding: $paddingRow 0px;
+
+    &:last-child {
+      padding-top: calc(#{$paddingRow} + 20px);
+    }
+  }
+
+  &-links {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &-btns {
+    display: flex;
+
+    img {
+      height: 40px;
+      border: 1px solid rgb(166, 166, 166);
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+  }
+
+  &-cell {
+    flex: 1;
+  }
+
+  &-icons {
+    font-family: "Font Awesome 5 Brands";
+    color: inherit;
+    font-size: 24px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

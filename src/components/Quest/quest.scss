@@ -1,0 +1,58 @@
+@import "../../stylesheets/color-palette";
+@import "../../stylesheets/mixins";
+
+.quest {
+  border-top: 0.5px solid $clr-quest-border;
+  &:last-child {
+    border-bottom: 1px solid $clr-quest-border;
+  }
+
+  overflow: hidden;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0;
+    cursor: pointer;
+    font-size: 24px;
+
+    &__block {
+      display: inline-block;
+
+      font-size: 32px;
+      line-height: 28px;
+      letter-spacing: 0.4px;
+    }
+
+    &__cross {
+      position: relative;
+      margin: 10px;
+      .line {
+        position: absolute;
+        display: inline;
+        top: 50%;
+        right: 0;
+        width: 24px;
+        height: 3px;
+        border-radius: 5px;
+        background: $clr-quest-cross;
+        transition: 0.1s;
+        &:nth-child(2) {
+          transition: 0.3s;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  &-answer {
+    display: flex;
+    justify-content: flex-start;
+    height: 0;
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    @include ease(0.25s);
+  }
+}

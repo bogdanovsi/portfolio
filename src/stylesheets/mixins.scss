@@ -1,0 +1,46 @@
+@mixin ease($duration: 0.3s) {
+  @include css3-prefix(
+    transition,
+    all $duration cubic-bezier(0.23, 1, 0.32, 1)
+  );
+}
+
+@mixin flex-center {
+  display: flex;
+  @include flex-setup(center, center);
+}
+
+@mixin flex-setup($align: center, $content: center) {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin background(
+  $imgpath,
+  $size,
+  $position: 0 0,
+  $repeat: no-repeat,
+  $attachment: fixed
+) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    repeat: $repeat;
+    attachment: $attachment;
+  }
+
+  @include css3-prefix(background-size, $size);
+}
+
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}

@@ -1,0 +1,18 @@
+@mixin font-setting-default {
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin font-light {
+  font-family: "Releway-Light", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+@mixin font-regular {
+  font-family: "Releway-Light", sans-serif;
+}
+
+@mixin font-medium {
+  font-family: "Releway-Medium", sans-serif;
+}
+

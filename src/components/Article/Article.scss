@@ -1,0 +1,44 @@
+@import "../../stylesheets/color-palette";
+
+.article {
+  color: $clr-navbar-text;
+  background: none;
+  background-color: none;
+  z-index: 2;
+  word-break: break-word;
+
+  &_pre-title {
+    font-size: 24px;
+  }
+
+  &_title {
+    font-family: "Relaway-Light", sans-serif;
+
+    font-size: 96px;
+    margin-bottom: 30px;
+    letter-spacing: -1.5px;
+  }
+
+  &_p {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+  }
+
+  &_bottom-link {
+    a {
+      color: inherit;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.2px;
+
+      text-decoration: underline;
+    }
+  }
+}
+
+#features {
+  .article_title {
+    font-size: 3rem !important;
+  }
+}
